@@ -318,6 +318,16 @@ class CybORG (CybORGLogger):
         """
         return self.environment_controller.hostname_ip_map
     
+    def get_cidr_map(self):
+        """
+        Returns a mapping of the subnets to their ip addresses for the current scenario.
+        Returns
+        -------
+        dict
+            The subnet ip_map indexed by subnet name
+        """
+        return self.environment_controller.subnet_cidr_map
+    
     def get_rewards(self):
         """
         Returns the rewards for each agent at the last executed step.
